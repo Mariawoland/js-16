@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>JS 16</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        .konteineri {
+            width: 625px;
+            height: 625px;
+            box-sizing: border-box;
+            padding: 30px;
+            background: #2321AF;
+            border-radius: 61px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        p {
+            font-family: 'Inter';
+            font-weight: 700;
+            line-height: 39px;
+            color: #FFFFFF;
+            margin-bottom: 70px;
+        }
+
+        #inputi {
+            width: 476px;
+            height: 69px;
+            background: #FFFFFF;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+            box-sizing: border-box;
+            padding-left: 20px;
+        }
+
+        #gilaki {
+            width: 390px;
+            height: 55px;
+            background: #299318;
+            border: none;
+            border-radius: 20px;
+            font-family: 'Inter';
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            color: #FFFFFF;
+        }
+
+        @media (max-width: 700px) {
+
+            .konteineri,
+            #inputi,
+            #gilaki {
+                width: 90%;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="konteineri">
+
+        <p style="font-size: 32px; text-align: center;">Temperature Converter</p>
+
+        <input id="inputi" placeholder="Enter degree in celsius">
+
+        <div style="width: 80%; display: flex; gap: 10px;">
+
+            <p style="font-size: 16px;">Result in farenheit: </p>
+            <p style="font-size: 16px;" id="shedegi"></p>
+
+        </div>
+
+        <button id="gilaki" onclick="gamotvla()">converet</button>
+
+    </div>
+
+
+    <script>
+
+
+        function gamotvla() {
+
+            var celsiusi = document.getElementById("inputi").value;
+
+            var c = parseInt(celsiusi);
+
+            var f = (c * 9 / 5) + 32;
+
+            document.getElementById("shedegi").innerHTML = f;
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
